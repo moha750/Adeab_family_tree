@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>شجرة عائلة نادي أدِيب</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
                     <li class="active"></li>
                     <li></li>
                     <li></li>
-                    <!--<li></li>-->
+                    <li></li>
                 </ul>
             </div> 
 
@@ -76,16 +77,98 @@
           <span> 📚الكلية والتخصص  </span>
       </div>
 
-    <div class="input-text">
-      <input type="date" id="input" name="تاريخ الميلاد"  require>
-      <span> 🎉تاريخ ميلادك  </span>
-  </div>
+      <div class="input-text">
+        <label for="input"> :📊المستوى الدراسي</label>
+
+          <select id="input" class="adeabTeam" name="المرحلة الدراسية" >
+            <option value="">أختر مستواك الدراسي</option>
+            <option value="الدبلوم"> الدبلوم  </option>
+            <option value="البكالوريوس"> البكالوريوس </option>
+            <option value="الماجستير"> الماجستير </option>
+            <option value="الدكتوراة"> الدكتوراة </option>
+            <option value="خريج"> خريج </option>
+            <option value="موظف"> موظف </option>
+          </select>
+    </div>
+
+      <div class="input-text">
+        <input type="date" id="input" name="تاريخ الميلاد"  require>
+        <span> 🎉تاريخ ميلادك  </span>
+    </div>
 
                 <div class="button button_gap">
-                    <button class="back-click">الرجوع للخلف</button>
-                    <button class="next-click">يلا، باقي آخر خطوة</button>
+                    <button class="back-click">ليه بترجع؟</button>
+                    <button class="next-click">كمّل! غصنك قاعد يُزهر</button>
                 </div>
       </div>
+
+
+      <div class="main">
+        <div class="content">
+           <h4>  🔐😌تطمّن بياناتك في الحفظ والصون </h4>
+           <p>  
+            ستخزن البيانات في قاعدة بيانات خاصة بنادي أدِيب ولن يطلع عليها أحد غير المُصرح لهم
+          </p>
+        </div> 
+
+        <div class="radio-wrapper-22">
+          <label id="pepole" class="radio-wrapper" for="example-22">
+            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-22" value="لجنة السفراء"/>
+            <span class="radio-tile">
+              <span class="radio-icon">
+                <i class="fa-solid fa-users"></i>
+              </span>
+              <span class="radio-label">لجنة السفراء</span>
+            </span>
+          </label>
+
+          <label id="writing" class="radio-wrapper" for="example-33">
+            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-33" value="لجنة صناعة المحتوى"/>
+            <span class="radio-tile">
+              <span class="radio-icon">
+                <i class="fa-solid fa-lightbulb"></i> <i class="fa-solid fa-pen"></i>
+              </span>
+              <span class="radio-label">لجنة صناعة المحتوى</span>
+            </span>
+          </label>
+
+          <label id="mic" class="radio-wrapper" for="example-44">
+            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-44" value="لجنة الإلقاء والتمثيل"/>
+            <span class="radio-tile">
+              <span class="radio-icon">
+                <i class="fa-solid fa-microphone-lines"></i> <i class="fa-solid fa-masks-theater"></i>
+              </span>
+              <span class="radio-label">لجنة الإلقاء والتمثيل</span>
+            </span>
+          </label>
+
+          <label id="art" class="radio-wrapper" for="example-55">
+            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-55" value="لجنة الفنون"/>
+            <span class="radio-tile">
+              <span class="radio-icon">
+                <i class="fa-solid fa-palette"></i>
+              </span>
+              <span class="radio-label">لجنة الفنون</span>
+            </span>
+          </label>
+
+          <label id="media" class="radio-wrapper" for="example-66">
+            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-66" value="لجنة الانتاج"/>
+            <span class="radio-tile">
+              <span class="radio-icon">
+                <i class="fa-solid fa-clapperboard"></i> <i class="fa-solid fa-pen-nib"></i>
+              </span>
+              <span class="radio-label">لجنة الانتاج</span>
+            </span>
+          </label>
+        </div>
+
+
+        <div class="button button_gap">
+            <button class="back-click">الرجوع للخلف</button>
+            <button class="next-click">يلا، باقي آخر خطوة</button>
+        </div>
+</div>
 
 
       <div class="main">
@@ -94,19 +177,6 @@
            <h4> ✨🤝لإنك نِعم المعرفة </h4>
            <p>ودنا نعرف اهتمامات فرد عائلتنا أكثر</p>
         </div>
-
-        <div class="input-text">
-          <label for="input"> :🏅اللجنة</label>
-    
-            <select id="adeabTeam" name="اللجنة" >
-              <option value="">أختار لجنتك يـ أدِيب/ـه</option>
-              <option value="لجنة صناعة المحتوى"> 📝لجنة صناعة المحتوى </option>
-              <option value="لجنة الإنتاج"> 🎬لجنة الإنتاج </option>
-              <option value="لجنة الالقاء والتمثل"> 🎭🎤لجنة الالقاء والتمثل </option>
-              <option value="لجنة الفنون"> 🎨لجنة الفنون </option>
-              <option value="لجنة السُفراء"> ✉️لجنة السُفراء </option>
-            </select>
-      </div>
 
       <div class="input-text">
         <input id="input" type="text" placeholder="@username"  name="حساب التلقرام" require>
@@ -211,8 +281,10 @@
         </div>
       </div>
     </div>
-    </form>
-      <script src="script.js"></script>
+    </form>      
+    <script src="script.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
       <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzlUu6guBYEKYM6VwzvQpg07V_FL_okpYHzapbX8F1eB5qZZrV6kjUox9jBPdySOphYRw/exec'
         const form = document.forms['MyGroup']
@@ -236,6 +308,242 @@
             }
           }
         </script>
+
+<script>
+  document.getElementById('pepole').addEventListener('click', function() {
+      Swal.fire({
+        title: 'اختر خياراً',
+          html: `
+              <input type="radio" class="team" id="option1" name="options" value="خيار 1">
+              <label for="option1">خيار 1</label><br>
+              <input type="radio" class="team" id="option2" name="options" value="خيار 2">
+              <label for="option2">خيار 2</label><br>
+          `,
+          showCancelButton: true,
+          confirmButtonText: 'تأكيد',
+          cancelButtonText: 'إلغاء',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="options"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('يرجى اختيار خيار');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(`لقد اخترت: ${result.value}`);
+          }
+      });
+  });
+  </script>
+
+
+<script>
+  document.getElementById('writing').addEventListener('click', function() {
+      Swal.fire({
+        title: 'اختر فريقًا',
+          titleColor: "#335C81",
+          background:'#fff',
+          html: `
+              <div class="wrapper">
+              <input type="radio" name="select" id="option-1">
+              <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                  <div class="dot"></div>
+                    <span>مُنظم</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                  <div class="dot"></div>
+                    <span>سفير</span>
+                </label>
+              </div>
+          `,
+          showCancelButton: true,
+          cancelButtonText: 'إلغاء',
+          confirmButtonText: 'تأكيد',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="select"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(
+                `متشوقين نشوف إبداعاتك يـ سفير/ـه`
+              );
+          }
+      });
+  });
+  </script>
+
+
+<script>
+  document.getElementById('writing').addEventListener('click', function() {
+      Swal.fire({
+        title: 'اختر فريقًا',
+          titleColor: "#335C81",
+          background:'#fff',
+          html: `
+              <div class="wrapper">
+              <input type="radio" name="select" id="option-1">
+              <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                  <div class="dot"></div>
+                    <span>مُفكر</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                  <div class="dot"></div>
+                    <span>كاتب</span>
+                </label>
+              </div>
+          `,
+          showCancelButton: true,
+          cancelButtonText: 'إلغاء',
+          confirmButtonText: 'تأكيد',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="select"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(
+                `متشوقين نشوف إبداعاتك يـ مُؤلف/ـه`
+              );
+          }
+      });
+  });
+  </script>
+
+
+<script>
+  document.getElementById('mic').addEventListener('click', function() {
+      Swal.fire({
+        title: 'اختر فريقًا',
+          titleColor: "#335C81",
+          background:'#fff',
+          html: `
+              <div class="wrapper">
+              <input type="radio" name="select" id="option-1">
+              <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                  <div class="dot"></div>
+                    <span>مُتحدث</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                  <div class="dot"></div>
+                    <span>مُمثل</span>
+                </label>
+              </div>
+          `,
+          showCancelButton: true,
+          cancelButtonText: 'إلغاء',
+          confirmButtonText: 'تأكيد',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="select"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(
+                `متشوقين نشوف إبداعاتك يـ راوي/يـه`
+              );
+          }
+      });
+  });
+  </script>
+
+
+<script>
+  document.getElementById('art').addEventListener('click', function() {
+      Swal.fire({
+          title: 'اختر فريقًا',
+          titleColor: "#335C81",
+          background:'#fff',
+          html: `
+              <div class="wrapper">
+              <input type="radio" name="select" id="option-1">
+              <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                  <div class="dot"></div>
+                    <span>رسّام</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                  <div class="dot"></div>
+                    <span>أعمال يدوية</span>
+                </label>
+              </div>
+          `,
+          showCancelButton: true,
+          cancelButtonText: 'إلغاء',
+          confirmButtonText: 'تأكيد',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="select"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(
+                `متشوقين نشوف إبداعاتك يـ فنان/ـه`
+              );
+          }
+      });
+  });
+  </script>
+
+
+<script>
+  document.getElementById('media').addEventListener('click', function() {
+      Swal.fire({
+          title: 'اختر فريقًا',
+          titleColor: "#335C81",
+          background:'#fff',
+          html: `
+              <div class="wrapper">
+              <input type="radio" name="select" id="option-1">
+              <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                  <div class="dot"></div>
+                    <span>مُصمم</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                  <div class="dot"></div>
+                    <span>مُصور</span>
+                </label>
+              </div>
+          `,
+          showCancelButton: true,
+          cancelButtonText: 'إلغاء',
+          confirmButtonText: 'تأكيد',
+          preConfirm: () => {
+              const selectedOption = document.querySelector('input[name="select"]:checked');
+              if (!selectedOption) {
+                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
+              }
+              return selectedOption ? selectedOption.value : null;
+          }
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire(
+                `متشوقين نشوف إبداعاتك يـ إعلامي/ـه`
+              );
+          }
+      });
+  });
+  </script>
+
+
+
 
       </body>
 </html>
