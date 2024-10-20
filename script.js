@@ -27,7 +27,6 @@ next_click.forEach(function(next_page){
     });
 });
 
-
 back_click.forEach(function(back_page){
     back_page.addEventListener('click',function(){
          formnumber--;
@@ -87,3 +86,377 @@ function validateform(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+const openPopup1 = document.getElementById('openPopup1');
+const popup1 = document.getElementById('popup1');
+const closePopup1 = document.getElementById('closePopup1');
+const cancelButton1 = document.getElementById('cancelButton1');
+const confirmButton1 = document.getElementById('confirmButton1');
+const errorMessage1 = document.getElementById('errorMessage1');
+
+const resultPopup1 = document.getElementById('resultPopup1');
+const closeResultPopup1 = document.getElementById('closeResultPopup1');
+const resultMessage1 = document.getElementById('resultMessage1');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup1.addEventListener('click', () => {
+    popup1.style.display = 'flex';
+    errorMessage1.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup1.addEventListener('click', () => {
+    popup1.style.display = 'none';
+    errorMessage1.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton1.addEventListener('click', () => {
+    popup1.style.display = 'none';
+    errorMessage1.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton1.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="الفريق"]:checked');
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage5.textContent = ' 🤝أنت الآن ' + selectedOption.value + ' أدِيب ';
+
+        popup1.style.display = 'none';
+        resultPopup1.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage1.textContent = '🦦شلون يعني؟ كيف نعرف مهنتك';
+        errorMessage1.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup1.addEventListener('click', () => {
+    resultPopup1.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup1) {
+        popup1.style.display = 'none';
+        errorMessage1.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup) {
+        resultPopup1.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+const openPopup2 = document.getElementById('openPopup2');
+const popup2 = document.getElementById('popup2');
+const closePopup2 = document.getElementById('closePopup2');
+const cancelButton2 = document.getElementById('cancelButton2');
+const confirmButton2 = document.getElementById('confirmButton2');
+const errorMessage2 = document.getElementById('errorMessage2');
+
+const resultPopup2 = document.getElementById('resultPopup2');
+const closeResultPopup2 = document.getElementById('closeResultPopup2');
+const resultMessage2 = document.getElementById('resultMessage2');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup2.addEventListener('click', () => {
+    popup2.style.display = 'flex';
+    errorMessage2.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup2.addEventListener('click', () => {
+    popup2.style.display = 'none';
+    errorMessage2.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton2.addEventListener('click', () => {
+    popup2.style.display = 'none';
+    errorMessage2.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton2.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="الفريق"]:checked');
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage5.textContent = ' 📝أنت الآن ' + selectedOption.value + ' أدِيب ';
+
+        popup2.style.display = 'none';
+        resultPopup2.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage2.textContent = '🦦شلون يعني؟ كيف نعرف مهنتك';
+        errorMessage2.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup2.addEventListener('click', () => {
+    resultPopup2.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup2) {
+        popup2.style.display = 'none';
+        errorMessage2.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup2) {
+        resultPopup2.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const openPopup3 = document.getElementById('openPopup3');
+const popup3 = document.getElementById('popup3');
+const closePopup3 = document.getElementById('closePopup3');
+const cancelButton3 = document.getElementById('cancelButton3');
+const confirmButton3 = document.getElementById('confirmButton3');
+const errorMessage3 = document.getElementById('errorMessage3');
+
+const resultPopup3 = document.getElementById('resultPopup3');
+const closeResultPopup3 = document.getElementById('closeResultPopup3');
+const resultMessage3 = document.getElementById('resultMessage3');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup3.addEventListener('click', () => {
+    popup3.style.display = 'flex';
+    errorMessage3.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup3.addEventListener('click', () => {
+    popup3.style.display = 'none';
+    errorMessage3.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton3.addEventListener('click', () => {
+    popup3.style.display = 'none';
+    errorMessage3.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton3.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="الفريق"]:checked');
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage5.textContent = ' 🎙️أنت الآن ' + selectedOption.value + ' أدِيب ';
+
+        popup3.style.display = 'none';
+        resultPopup3.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage3.textContent = '🦦شلون يعني؟ كيف نعرف مهنتك';
+        errorMessage3.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup3.addEventListener('click', () => {
+    resultPopup3.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup3) {
+        popup3.style.display = 'none';
+        errorMessage3.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup3) {
+        resultPopup3.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const openPopup4 = document.getElementById('openPopup4');
+const popup4 = document.getElementById('popup4');
+const closePopup4 = document.getElementById('closePopup4');
+const cancelButton4 = document.getElementById('cancelButton4');
+const confirmButton4 = document.getElementById('confirmButton4');
+const errorMessage4 = document.getElementById('errorMessage4');
+
+const resultPopup4 = document.getElementById('resultPopup4');
+const closeResultPopup4 = document.getElementById('closeResultPopup4');
+const resultMessage4 = document.getElementById('resultMessage4');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup4.addEventListener('click', () => {
+    popup4.style.display = 'flex';
+    errorMessage4.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup4.addEventListener('click', () => {
+    popup4.style.display = 'none';
+    errorMessage4.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton4.addEventListener('click', () => {
+    popup4.style.display = 'none';
+    errorMessage4.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton4.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="الفريق"]:checked');
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage5.textContent = ' 🎨أنت الآن ' + selectedOption.value + ' أدِيب ';
+
+        popup4.style.display = 'none';
+        resultPopup4.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage4.textContent = '🦦شلون يعني؟ كيف نعرف مهنتك';
+        errorMessage4.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup4.addEventListener('click', () => {
+    resultPopup4.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup4) {
+        popup4.style.display = 'none';
+        errorMessage4.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup4) {
+        resultPopup4.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const openPopup5 = document.getElementById('openPopup5');
+const popup5 = document.getElementById('popup5');
+const closePopup5 = document.getElementById('closePopup5');
+const cancelButton5 = document.getElementById('cancelButton5');
+const confirmButton5 = document.getElementById('confirmButton5');
+const errorMessage5 = document.getElementById('errorMessage5');
+
+const resultPopup5 = document.getElementById('resultPopup5');
+const closeResultPopup5 = document.getElementById('closeResultPopup5');
+const resultMessage5 = document.getElementById('resultMessage5');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup5.addEventListener('click', () => {
+    popup5.style.display = 'flex';
+    errorMessage5.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup5.addEventListener('click', () => {
+    popup5.style.display = 'none';
+    errorMessage5.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton5.addEventListener('click', () => {
+    popup5.style.display = 'none';
+    errorMessage5.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton5.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="الفريق"]:checked');
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage5.textContent = ' 🎬أنت الآن ' + selectedOption.value + ' أدِيب ';
+
+        popup5.style.display = 'none';
+        resultPopup5.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage5.textContent = '🦦شلون يعني؟ كيف نعرف مهنتك';
+        errorMessage5.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup5.addEventListener('click', () => {
+    resultPopup5.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup5) {
+        popup5.style.display = 'none';
+        errorMessage5.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup5) {
+        resultPopup5.style.display = 'none';
+    }
+});
