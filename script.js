@@ -152,7 +152,7 @@ window.addEventListener('click', (e) => {
         popup1.style.display = 'none';
         errorMessage1.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
     }
-    if (e.target == resultPopup) {
+    if (e.target == resultPopup1) {
         resultPopup1.style.display = 'none';
     }
 });
@@ -460,3 +460,162 @@ window.addEventListener('click', (e) => {
         resultPopup5.style.display = 'none';
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// جلب العناصر من الصفحة
+const openPopup6 = document.getElementById('openPopup6');
+const popup6 = document.getElementById('popup6');
+const closePopup6 = document.getElementById('closePopup6');
+const cancelButton6 = document.getElementById('cancelButton6');
+const confirmButton6 = document.getElementById('confirmButton6');
+const errorMessage6 = document.getElementById('errorMessage6');
+const selectOption = document.getElementById('selectOption');
+const resultPopup6 = document.getElementById('resultPopup6');
+const closeResultPopup6 = document.getElementById('closeResultPopup6');
+const resultMessage6 = document.getElementById('resultMessage6');
+
+// فتح النافذة المنبثقة عند الضغط على الزر
+openPopup6.addEventListener('click', () => {
+    popup6.style.display = 'flex';
+    errorMessage6.style.display = 'none';  // إخفاء رسالة الخطأ عند فتح النافذة
+});
+
+// إغلاق النافذة عند الضغط على زر الإغلاق أو زر الإلغاء
+closePopup6.addEventListener('click', () => {
+    popup6.style.display = 'none';
+    errorMessage6.style.display = 'none';  // إخفاء رسالة الخطأ عند إغلاق النافذة
+});
+
+cancelButton6.addEventListener('click', () => {
+    popup6.style.display = 'none';
+    errorMessage6.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط على إلغاء
+});
+
+// التأكيد على الخيار المحدد عند الضغط على زر "موافقة"
+confirmButton6.addEventListener('click', () => {
+    const selectedOption = selectOption.value;
+    if (selectedOption) {
+        // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
+        resultMessage6.textContent = ' 🤝أهلاً بِـ ' + selectOption.value ;
+
+        popup6.style.display = 'none';
+        resultPopup6.style.display = 'flex';
+    } else {
+        // عرض رسالة الخطأ إذا لم يتم تحديد خيار
+        errorMessage6.textContent = 'يرجى اختيار أحد الخيارات.';
+        errorMessage6.style.display = 'block';
+    }
+});
+
+// إغلاق نافذة النتيجة
+closeResultPopup6.addEventListener('click', () => {
+    resultPopup6.style.display = 'none';
+});
+
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener('click', (e) => {
+    if (e.target == popup6) {
+        popup6.style.display = 'none';
+        errorMessage6.style.display = 'none';  // إخفاء رسالة الخطأ عند الضغط خارج النافذة
+    }
+    if (e.target == resultPopup6) {
+        resultPopup6.style.display = 'none';
+    }
+});
+
+// زر موافقة
+confirmBtn.addEventListener('click', () => {
+    const selectedValue = selectOption.value;
+
+    if (selectedValue === "") {
+        // عرض رسالة خطأ إذا لم يتم تحديد أي خيار
+        resultMessage6.textContent = "الرجاء اختيار خيار من القائمة!";
+        resultMessage6.style.color = "red";
+    } else {
+        // عرض الخيار المحدد
+        resultMessage6.textContent = `لقد اخترت: ${selectedValue}`;
+        resultMessage6.style.color = "green";
+    }
+
+    // إغلاق النافذة المنبثقة الأولى
+    popup6.style.display = 'none';
+    // عرض نافذة النتيجة
+    resultPopup6.style.display = 'flex';
+});
+
+
+
+
+
+
+
+
+
