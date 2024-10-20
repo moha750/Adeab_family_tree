@@ -97,7 +97,7 @@
     </div>
 
                 <div class="button button_gap">
-                    <button class="back-click">ليه بترجع؟</button>
+                    <button class="back-click">ما يحتاج ترجع، كمّل</button>
                     <button class="next-click">كمّل! غصنك قاعد يُزهر</button>
                 </div>
       </div>
@@ -111,10 +111,12 @@
           </p>
         </div> 
 
+            <!-- النافذة المنبثقة الخامسة -->
+
         <div class="radio-wrapper-22">
           <label id="pepole" class="radio-wrapper" for="example-22">
-            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-22" value="لجنة السفراء"/>
-            <span class="radio-tile">
+            <input type="radio" class="radio-input" name="اللجنة" id="example-22" value="لجنة السفراء"/>
+            <span id="openPopup1" class="radio-tile">
               <span class="radio-icon">
                 <i class="fa-solid fa-users"></i>
               </span>
@@ -122,19 +124,108 @@
             </span>
           </label>
 
-          <label id="writing" class="radio-wrapper" for="example-33">
-            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-33" value="لجنة صناعة المحتوى"/>
-            <span class="radio-tile">
-              <span class="radio-icon">
-                <i class="fa-solid fa-lightbulb"></i> <i class="fa-solid fa-pen"></i>
-              </span>
-              <span class="radio-label">لجنة صناعة المحتوى</span>
-            </span>
-          </label>
+          <div id="popup1" class="popup1">
+            <div class="popup-content1">
+                <span id="closePopup1" class="close">&times;</span>
+                <h2 class="job"> ✨أختر مهنتك </h2>
 
+                <div class="wrapper">
+
+                  <input type="radio" name="الفريق" id="option-1" value="مُنظم"> 
+                  <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                      <span>مُنظم</span>
+                  </label>
+
+
+
+                  <input type="radio" name="الفريق" id="option-2" value="سفير"> 
+                  <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                      <span>سفير</span>
+                  </label>
+               </div>
+
+                    <!-- مكان عرض رسالة الخطأ -->
+                    <p id="errorMessage1" class="error-message1" style="display: none; color: red; font-family: b;"></p>
+      
+                    <button type="button" id="cancelButton1">غيرت رأيي</button>
+                    <button type="button" id="confirmButton1">هاي هاي كابتن</button>
+
+            </div>
+        </div>
+      
+        <div id="resultPopup1" class="popup1">
+            <div class="popup-content1">
+                <span id="closeResultPopup1" class="close">&times;</span>
+                <h2 id="resultMessage1"></h2>
+            </div>
+        </div>
+
+            <!-- النافذة المنبثقة الخامسة -->
+
+
+                        <!-- النافذة المنبثقة الخامسة -->
+
+                        <label id="writing" class="radio-wrapper" for="example-33">
+                          <input type="radio" class="radio-input" name="اللجنة" id="example-33" value="لجنة صناعة المحتوى"/>
+                          <span id="openPopup2" class="radio-tile">
+                            <span class="radio-icon">
+                              <i class="fa-solid fa-lightbulb"></i> <i class="fa-solid fa-pen"></i>
+                            </span>
+                            <span class="radio-label">لجنة صناعة المحتوى</span>
+                          </span>
+                        </label>
+              
+                        <div id="popup2" class="popup2">
+                          <div class="popup-content2">
+                              <span id="closePopup2" class="close">&times;</span>
+                              <h2 class="job">✨أختر مهنتك</h2>
+              
+                              <div class="wrapper">
+              
+                                <input type="radio" name="الفريق" id="option-3" value="مُفكر"> 
+                                <label for="option-3" class="option option-3">
+                                  <div class="dot"></div>
+                                    <span>مُفكر</span>
+                                </label>
+              
+              
+              
+                                <input type="radio" name="الفريق" id="option-4" value="كاتب"> 
+                                <label for="option-4" class="option option-4">
+                                  <div class="dot"></div>
+                                    <span>كاتب</span>
+                                </label>
+                             </div>
+                    
+                                  <!-- مكان عرض رسالة الخطأ -->
+                                  <p id="errorMessage2" class="error-message2" style="display: none; color: red; font-family: b;"></p>
+                    
+                                  <button type="button" id="cancelButton2">غيرت رأيي</button>
+                                  <button type="button" id="confirmButton2">هاي هاي كابتن</button>
+              
+                          </div>
+                      </div>
+                    
+                      <div id="resultPopup2" class="popup2">
+                          <div class="popup-content2">
+                              <span id="closeResultPopup2" class="close">&times;</span>
+                              <h2 id="resultMessage2"></h2>
+                          </div>
+                      </div>
+
+            <!-- النافذة المنبثقة الخامسة -->
+
+
+
+
+
+
+            <!-- النافذة المنبثقة الخامسة -->
           <label id="mic" class="radio-wrapper" for="example-44">
-            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-44" value="لجنة الإلقاء والتمثيل"/>
-            <span class="radio-tile">
+            <input type="radio" class="radio-input" name="اللجنة" id="example-44" value="لجنة الإلقاء والتمثيل"/>
+            <span id="openPopup3" class="radio-tile">
               <span class="radio-icon">
                 <i class="fa-solid fa-microphone-lines"></i> <i class="fa-solid fa-masks-theater"></i>
               </span>
@@ -142,9 +233,52 @@
             </span>
           </label>
 
+          <div id="popup3" class="popup3">
+            <div class="popup-content3">
+                <span id="closePopup3" class="close">&times;</span>
+                <h2 class="job"> ✨أختر مهنتك</h2>
+
+                <div class="wrapper">
+
+                  <input type="radio" name="الفريق" id="option-5" value="مُمثل"> 
+                  <label for="option-5" class="option option-5">
+                    <div class="dot"></div>
+                      <span>مُمثل</span>
+                  </label>
+
+
+
+                  <input type="radio" name="الفريق" id="option-6" value="مٌتحدث"> 
+                  <label for="option-6" class="option option-6">
+                    <div class="dot"></div>
+                      <span>مٌتحدث</span>
+                  </label>
+               </div>
+      
+                    <!-- مكان عرض رسالة الخطأ -->
+                    <p id="errorMessage3" class="error-message3" style="display: none; color: red; font-family: b;"></p>
+      
+                    <button type="button" id="cancelButton3">غيرت رأيي</button>
+                    <button type="button" id="confirmButton3">هاي هاي كابتن</button>
+
+            </div>
+        </div>
+      
+        <div id="resultPopup3" class="popup3">
+            <div class="popup-content3">
+                <span id="closeResultPopup3" class="close">&times;</span>
+                <h2 id="resultMessage3"></h2>
+            </div>
+        </div>
+            <!-- النافذة المنبثقة الخامسة -->
+
+
+
+            <!-- النافذة المنبثقة الخامسة -->
+
           <label id="art" class="radio-wrapper" for="example-55">
-            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-55" value="لجنة الفنون"/>
-            <span class="radio-tile">
+            <input type="radio" class="radio-input" name="اللجنة" id="example-55" value="لجنة الفنون"/>
+            <span id="openPopup4" class="radio-tile">
               <span class="radio-icon">
                 <i class="fa-solid fa-palette"></i>
               </span>
@@ -152,9 +286,52 @@
             </span>
           </label>
 
+          <div id="popup4" class="popup4">
+            <div class="popup-content4">
+                <span id="closePopup4" class="close">&times;</span>
+                <h2 class="job">✨أختر مهنتك</h2>
+
+                <div class="wrapper">
+
+                  <input type="radio" name="الفريق" id="option-7" value="أعمال يدوية">
+                  <label for="option-7" class="option option-7">
+                    <div class="dot"></div>
+                      <span>أعمال يدوية</span>
+                  </label>
+
+
+
+                  <input type="radio" name="الفريق" id="option-8" value="رسّام"> 
+                  <label for="option-8" class="option option-8">
+                    <div class="dot"></div>
+                      <span>رسّام</span>
+                  </label>
+               </div>
+      
+                    <!-- مكان عرض رسالة الخطأ -->
+                    <p id="errorMessage4" class="error-message4" style="display: none; color: red; font-family: b;"></p>
+      
+                    <button type="button" id="cancelButton4">غيرت رأيي</button>
+                    <button type="button" id="confirmButton4">هاي هاي كابتن</button>
+
+            </div>
+        </div>
+      
+        <div id="resultPopup4" class="popup4">
+            <div class="popup-content4">
+                <span id="closeResultPopup4" class="close">&times;</span>
+                <h2 id="resultMessage4"></h2>
+            </div>
+        </div>
+            <!-- النافذة المنبثقة الخامسة -->
+
+
+
+            <!-- النافذة المنبثقة الخامسة -->
+
           <label id="media" class="radio-wrapper" for="example-66">
-            <input type="radio" class="radio-input" name="اللجنة المُختارة" id="example-66" value="لجنة الانتاج"/>
-            <span class="radio-tile">
+            <input type="radio" class="radio-input" name="اللجنة" id="example-66" value="لجنة الانتاج"/>
+            <span id="openPopup5" class="radio-tile">
               <span class="radio-icon">
                 <i class="fa-solid fa-clapperboard"></i> <i class="fa-solid fa-pen-nib"></i>
               </span>
@@ -163,10 +340,53 @@
           </label>
         </div>
 
+        <div id="popup5" class="popup5">
+          <div class="popup-content5">
+              <span id="closePopup5" class="close">&times;</span>
+              <h2 class="job">✨أختر مهنتك</h2>
+
+              <div class="wrapper">
+
+                <input type="radio" name="الفريق" id="option-9" value="مُصمم"> 
+                <label for="option-9" class="option option-9">
+                  <div class="dot"></div>
+                    <span>مُصمم</span>
+                </label>
+
+
+
+                <input type="radio" name="الفريق" id="option-10" value="مُصور"> 
+                <label for="option-10" class="option option-10">
+                  <div class="dot"></div>
+                    <span>مُصور</span>
+                </label>
+             </div>
+    
+                  <!-- مكان عرض رسالة الخطأ -->
+                  <p id="errorMessage5" class="error-message5" style="display: none; color: red; font-family: b;"></p>
+    
+                  <button type="button" id="cancelButton5">غيرت رأيي</button>
+                  <button type="button" id="confirmButton5">هاي هاي كابتن</button>
+
+          </div>
+      </div>
+    
+      <div id="resultPopup5" class="popup5">
+          <div class="popup-content5">
+              <span id="closeResultPopup5" class="close">&times;</span>
+              <h2 id="resultMessage5"></h2>
+          </div>
+      </div>
+            <!-- النافذة المنبثقة الخامسة -->
+
+
+
+
+
 
         <div class="button button_gap">
-            <button class="back-click">الرجوع للخلف</button>
-            <button class="next-click">يلا، باقي آخر خطوة</button>
+            <button class="back-click">شاك بشيء؟ تقدر ترجع ترا</button>
+            <button class="next-click">يلا! باقي آخر خطوة لغصنك</button>
         </div>
 </div>
 
@@ -179,18 +399,18 @@
         </div>
 
       <div class="input-text">
-        <input id="input" type="text" placeholder="@username"  name="حساب التلقرام" require>
-        <span> 🔗حسابك على منصة التلقرام </span>
+        <input id="input" type="text" placeholder="@username"  name="حساب إكس" require>
+        <span> 🔗"حسابك على منصة إكس "إن وجد </span>
     </div>
 
     <div class="input-text">
-      <input id="input" type="text" placeholder="@username "  name="حساب اكس" require>
-      <span> 🔗"حسابك على منصة أكس "إن وجد</span>
+      <input id="input" type="text" placeholder="@username "  name="حساب إنستقرام" require>
+      <span> 🔗"حسابك على منصة إنستقرام "إن وجد</span>
   </div>
 
   <div class="input-text">
-    <input id="input" type="text" placeholder="@username"  name="حساب انستقرام" require>
-    <span> 🔗"حسابك على منصة انستقرام "إن وجد</span>
+    <input id="input" type="text" placeholder="@username"  name="حساب تيك توك" require>
+    <span> 🔗"حسابك على منصة تيك توك "إن وجد</span>
 </div>
 
 <h5 class="fintitle"> ماهو لونك المُفضل🎨؟   </h5>
@@ -265,7 +485,7 @@
                    <p> 
                     الإبداع يأتي من الثقة، ونحن نثق بطاقات مُبدعينا وأُدبائنا في أدِيب
                   </p>
-                </div>
+                </div> 
 
                 <div class="finish">
               <button class="twitter">     <a href="https://twitter.com/AB_KFU" target="_blank"> الذهاب إلى تويتر  </a></button>
@@ -281,269 +501,23 @@
         </div>
       </div>
     </div>
-    </form>      
+  </form> 
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-      <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzlUu6guBYEKYM6VwzvQpg07V_FL_okpYHzapbX8F1eB5qZZrV6kjUox9jBPdySOphYRw/exec'
-        const form = document.forms['MyGroup']
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzlUu6guBYEKYM6VwzvQpg07V_FL_okpYHzapbX8F1eB5qZZrV6kjUox9jBPdySOphYRw/exec'
+      const form = document.forms['MyGroup']
 
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          // .then(response => alert("Thank you! your form is submitted successfully." ))
-          // .then(() => {  window.location.reload(); })
-          // .catch(error => console.error('Error!', error.message))
-        })
-        </script>
-
-        <script>
-          function isChecked() {
-            if(document.getElementById("mobile").checked){
-              document.getElementById("result").style.display = 'block'
-            }
-            else{
-              document.getElementById("result").style.display = 'none'
-            }
-          }
-        </script>
-
-<script>
-  document.getElementById('pepole').addEventListener('click', function() {
-      Swal.fire({
-        title: 'اختر خياراً',
-          html: `
-              <input type="radio" class="team" id="option1" name="options" value="خيار 1">
-              <label for="option1">خيار 1</label><br>
-              <input type="radio" class="team" id="option2" name="options" value="خيار 2">
-              <label for="option2">خيار 2</label><br>
-          `,
-          showCancelButton: true,
-          confirmButtonText: 'تأكيد',
-          cancelButtonText: 'إلغاء',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="options"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('يرجى اختيار خيار');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(`لقد اخترت: ${result.value}`);
-          }
-      });
-  });
-  </script>
-
-
-<script>
-  document.getElementById('writing').addEventListener('click', function() {
-      Swal.fire({
-        title: 'اختر فريقًا',
-          titleColor: "#335C81",
-          background:'#fff',
-          html: `
-              <div class="wrapper">
-              <input type="radio" name="select" id="option-1">
-              <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                  <div class="dot"></div>
-                    <span>مُنظم</span>
-                    </label>
-                <label for="option-2" class="option option-2">
-                  <div class="dot"></div>
-                    <span>سفير</span>
-                </label>
-              </div>
-          `,
-          showCancelButton: true,
-          cancelButtonText: 'إلغاء',
-          confirmButtonText: 'تأكيد',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="select"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(
-                `متشوقين نشوف إبداعاتك يـ سفير/ـه`
-              );
-          }
-      });
-  });
-  </script>
-
-
-<script>
-  document.getElementById('writing').addEventListener('click', function() {
-      Swal.fire({
-        title: 'اختر فريقًا',
-          titleColor: "#335C81",
-          background:'#fff',
-          html: `
-              <div class="wrapper">
-              <input type="radio" name="select" id="option-1">
-              <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                  <div class="dot"></div>
-                    <span>مُفكر</span>
-                    </label>
-                <label for="option-2" class="option option-2">
-                  <div class="dot"></div>
-                    <span>كاتب</span>
-                </label>
-              </div>
-          `,
-          showCancelButton: true,
-          cancelButtonText: 'إلغاء',
-          confirmButtonText: 'تأكيد',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="select"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(
-                `متشوقين نشوف إبداعاتك يـ مُؤلف/ـه`
-              );
-          }
-      });
-  });
-  </script>
-
-
-<script>
-  document.getElementById('mic').addEventListener('click', function() {
-      Swal.fire({
-        title: 'اختر فريقًا',
-          titleColor: "#335C81",
-          background:'#fff',
-          html: `
-              <div class="wrapper">
-              <input type="radio" name="select" id="option-1">
-              <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                  <div class="dot"></div>
-                    <span>مُتحدث</span>
-                    </label>
-                <label for="option-2" class="option option-2">
-                  <div class="dot"></div>
-                    <span>مُمثل</span>
-                </label>
-              </div>
-          `,
-          showCancelButton: true,
-          cancelButtonText: 'إلغاء',
-          confirmButtonText: 'تأكيد',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="select"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(
-                `متشوقين نشوف إبداعاتك يـ راوي/يـه`
-              );
-          }
-      });
-  });
-  </script>
-
-
-<script>
-  document.getElementById('art').addEventListener('click', function() {
-      Swal.fire({
-          title: 'اختر فريقًا',
-          titleColor: "#335C81",
-          background:'#fff',
-          html: `
-              <div class="wrapper">
-              <input type="radio" name="select" id="option-1">
-              <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                  <div class="dot"></div>
-                    <span>رسّام</span>
-                    </label>
-                <label for="option-2" class="option option-2">
-                  <div class="dot"></div>
-                    <span>أعمال يدوية</span>
-                </label>
-              </div>
-          `,
-          showCancelButton: true,
-          cancelButtonText: 'إلغاء',
-          confirmButtonText: 'تأكيد',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="select"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(
-                `متشوقين نشوف إبداعاتك يـ فنان/ـه`
-              );
-          }
-      });
-  });
-  </script>
-
-
-<script>
-  document.getElementById('media').addEventListener('click', function() {
-      Swal.fire({
-          title: 'اختر فريقًا',
-          titleColor: "#335C81",
-          background:'#fff',
-          html: `
-              <div class="wrapper">
-              <input type="radio" name="select" id="option-1">
-              <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                  <div class="dot"></div>
-                    <span>مُصمم</span>
-                    </label>
-                <label for="option-2" class="option option-2">
-                  <div class="dot"></div>
-                    <span>مُصور</span>
-                </label>
-              </div>
-          `,
-          showCancelButton: true,
-          cancelButtonText: 'إلغاء',
-          confirmButtonText: 'تأكيد',
-          preConfirm: () => {
-              const selectedOption = document.querySelector('input[name="select"]:checked');
-              if (!selectedOption) {
-                  Swal.showValidationMessage('🦦شلون يعني، ما تبغى تختار فريق');
-              }
-              return selectedOption ? selectedOption.value : null;
-          }
-      }).then((result) => {
-          if (result.isConfirmed) {
-              Swal.fire(
-                `متشوقين نشوف إبداعاتك يـ إعلامي/ـه`
-              );
-          }
-      });
-  });
-  </script>
-
-
-
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => alert("Thank you! your form is submitted successfully." ))
+        // .then(() => {  window.location.reload(); })
+        // .catch(error => console.error('Error!', error.message))
+      })
+      </script>
 
       </body>
 </html>
