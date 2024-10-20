@@ -236,9 +236,9 @@ background-color: #0051B2;
      display:flex;
      gap:20px;
  }
- /* input[type="radio"]{
+ input[type="radio"]{
    display:none;
- } */
+ }
  .radio-text label{
      height:125px;
      width:100%;
@@ -306,6 +306,7 @@ background-color: #0051B2;
  a {
   text-decoration: none;
   color: white;
+  font-family: b;
  }
 
  .button button{
@@ -321,9 +322,7 @@ background-color: #0051B2;
      margin: 15px 0px 12px 0px;
      font-family: b;
  }
- .button button:hover{
-     background-color:#0051B2;
- }
+
  .button_gap{
    
      gap:20px;
@@ -479,16 +478,16 @@ margin-bottom: 10px;
 
 .group {
   height:40px;
-  width:45%;
-  background: linear-gradient(45deg, #009345 0%, #98c93c 90%);
+  width:80%;
+  background: linear-gradient(45deg, rgba(0,147,69,1) 0%, rgba(152,201,60,1) 90%);
   font-size:14px;
   color:#fff;
   border-radius:5px;
   cursor:pointer;
   transition:all 0.5s;
   border: none;
-  margin-left: 10px;
-  margin-bottom: 12px;
+  margin: 15px 0px 12px 0px;
+  font-family: bb;
 }
 
 
@@ -663,9 +662,9 @@ input[class="super-sad"]:focus + svg {
 }
 
 
-/* input[type="radio"]{
+input[type="radio"]{
   display: none;
-} */
+}
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2{
   border:2px solid #FFC60A;
@@ -954,9 +953,9 @@ input[type="color"] {
   transform: scale(1.5);
   transition: all 0.7s ease;
 }
-/* input[type="radio"]{
+input[type="radio"]{
   display: none;
-} */
+}
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2{
   border: none;
