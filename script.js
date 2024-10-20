@@ -130,7 +130,7 @@ confirmButton1.addEventListener('click', () => {
     const selectedOption = document.querySelector('input[name="الفريق"]:checked');
     if (selectedOption) {
         // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
-        resultMessage5.textContent = ' 🤝أنت الآن ' + selectedOption.value + ' أدِيب ';
+        resultMessage1.textContent = ' 🤝أنت الآن ' + selectedOption.value + ' أدِيب ';
 
         popup1.style.display = 'none';
         resultPopup1.style.display = 'flex';
@@ -200,7 +200,7 @@ confirmButton2.addEventListener('click', () => {
     const selectedOption = document.querySelector('input[name="الفريق"]:checked');
     if (selectedOption) {
         // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
-        resultMessage5.textContent = ' 📝أنت الآن ' + selectedOption.value + ' أدِيب ';
+        resultMessage2.textContent = ' 📝أنت الآن ' + selectedOption.value + ' أدِيب ';
 
         popup2.style.display = 'none';
         resultPopup2.style.display = 'flex';
@@ -280,7 +280,7 @@ confirmButton3.addEventListener('click', () => {
     const selectedOption = document.querySelector('input[name="الفريق"]:checked');
     if (selectedOption) {
         // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
-        resultMessage5.textContent = ' 🎙️أنت الآن ' + selectedOption.value + ' أدِيب ';
+        resultMessage3.textContent = ' 🎙️أنت الآن ' + selectedOption.value + ' أدِيب ';
 
         popup3.style.display = 'none';
         resultPopup3.style.display = 'flex';
@@ -360,7 +360,7 @@ confirmButton4.addEventListener('click', () => {
     const selectedOption = document.querySelector('input[name="الفريق"]:checked');
     if (selectedOption) {
         // عرض النافذة المنبثقة الثانية مع الرسالة المنسقة
-        resultMessage5.textContent = ' 🎨أنت الآن ' + selectedOption.value + ' أدِيب ';
+        resultMessage4.textContent = ' 🎨أنت الآن ' + selectedOption.value + ' أدِيب ';
 
         popup4.style.display = 'none';
         resultPopup4.style.display = 'flex';
