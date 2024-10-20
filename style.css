@@ -108,6 +108,7 @@ top:-13px;
 font-size:13px;
 font-weight:900;
 color:#009345;
+font-family: b;
 }
 
 .hr {
@@ -152,7 +153,7 @@ background-color: #0051B2;
  } 
  
  .top-div img{
-     width: 100px;
+     width: 250px;
      margin-right:7px;
  }
 
@@ -235,9 +236,9 @@ background-color: #0051B2;
      display:flex;
      gap:20px;
  }
- input[type="radio"]{
+ /* input[type="radio"]{
    display:none;
- }
+ } */
  .radio-text label{
      height:125px;
      width:100%;
@@ -587,10 +588,10 @@ max-width:650px;
 
 label svg {
   fill: rgb(242, 242, 242);
-  height: 32px;
-  width: 32px;
+  height: 33px;
+  width: 33px;
   margin: 0px;
-  padding: 0px 11.7px;
+  padding: 0px 11px;
 }
 
 input[type="radio"] + svg {
@@ -656,14 +657,15 @@ input[class="super-sad"]:focus + svg {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid hsla(148, 100%, 29%, 0.3);
   box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
   transition: all 0.7s ease;
 }
 
 
-input[type="radio"]{
+/* input[type="radio"]{
   display: none;
-}
+} */
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2{
   border:2px solid #FFC60A;
@@ -952,9 +954,9 @@ input[type="color"] {
   transform: scale(1.5);
   transition: all 0.7s ease;
 }
-input[type="radio"]{
+/* input[type="radio"]{
   display: none;
-}
+} */
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2{
   border: none;
@@ -1047,6 +1049,7 @@ input[type="radio"]{
 .swal2-title {
   color: #009345 !important;
   font-family: b !important;
+  font-size: 24px !important;
 }
 
 .swal2-styled.swal2-confirm {
@@ -1066,10 +1069,11 @@ input[type="radio"]{
 .swal2-validation-message {
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
   width: 80%;
   margin: 0px auto !important;
   justify-content: center !important;
-  background-color: #fff !important;
+  background-color: #e0e0e0 !important;
   color: #c14242 !important;
   font-family: bb;
 }
@@ -1078,6 +1082,9 @@ input[type="radio"]{
   background-color: #fff !important;
 }
 
+div:where(.swal2-container) .swal2-html-container {
+    margin: 0px !important;
+}
 
 
 
@@ -1110,6 +1117,10 @@ input[type="radio"]{
 
 
 
+.job {
+  color: #009345;
+  font-family: bb;
+}
 
 .radio-wrapper-22 {
   display: flex;
@@ -1144,7 +1155,6 @@ input[type="radio"]{
 
 .radio-wrapper-22 .radio-input:focus + .radio-tile {
   border-color: #009345;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #335C81;
 }
 
 .radio-wrapper-22 .radio-input:focus + .radio-tile:before {
@@ -1161,7 +1171,7 @@ input[type="radio"]{
   min-height:75px;
   margin: 10px;
   border-radius: 0.5rem;
-  border: 2px solid hsla(208, 43%, 35%, 0.3);
+  border: 2px solid hsla(148, 100%, 29%, 0.3);
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: 0.15s ease;
@@ -1176,7 +1186,7 @@ input[type="radio"]{
   display: block;
   width: 1.25rem;
   height: 1.25rem;
-  border: 2px solid #335C81;
+  border: 2px solid hsla(148, 100%, 29%, 0.3);
   background-color: #fff;
   border-radius: 50%;
   top: 0.25rem;
@@ -1190,8 +1200,9 @@ input[type="radio"]{
   background-position: 50% 50%;
 }
 .radio-wrapper-22 .radio-tile:hover {
-  border-color: #335C81;
+  border: 2px solid hsla(148, 100%, 29%, 0.6);
 }
+
 .radio-wrapper-22 .radio-tile:hover:before {
   transform: scale(1);
   opacity: 1;
@@ -1212,4 +1223,398 @@ input[type="radio"]{
   text-align: center;
   font-size: 18px;
   font-family: b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content1 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton1 {
+  background-color: #f44336;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+#confirmButton1 {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+/* نمط رسالة الخطأ */
+.error-message1 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#cancelButton1 {
+  font-family: r;
+}
+
+#confirmButton1 {
+  font-family: r;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content2 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton2 {
+  background-color: #f44336;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+#confirmButton2 {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+/* نمط رسالة الخطأ */
+.error-message2 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#cancelButton2 {
+  font-family: r;
+}
+
+#confirmButton2 {
+  font-family: r;
+}
+
+
+
+
+
+
+
+
+
+
+.popup3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content3 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton3 {
+  background-color: #f44336;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+#confirmButton3 {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+/* نمط رسالة الخطأ */
+.error-message3 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#cancelButton3 {
+  font-family: r;
+}
+
+#confirmButton3 {
+  font-family: r;
+}
+
+
+
+
+
+
+
+
+
+
+
+.popup4 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content4 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton4 {
+  background-color: #f44336;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+#confirmButton4 {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+/* نمط رسالة الخطأ */
+.error-message4 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#cancelButton4 {
+  font-family: r;
+}
+
+#confirmButton4 {
+  font-family: r;
+}
+
+
+
+
+
+
+
+.popup5 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content5 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton5 {
+  background-color: #f44336;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+#confirmButton5 {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  font-family: b;
+}
+
+/* نمط رسالة الخطأ */
+.error-message5 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#cancelButton5 {
+  font-family: r;
+}
+
+#confirmButton5 {
+  font-family: r;
 }
