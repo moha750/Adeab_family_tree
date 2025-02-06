@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <title>عرض بيانات الأعضاء</title>
+</head>
+<body>
+    <div class="card">
+        <img src="logo.png" alt="شعار">
+        <h4>استعلام عن بيانات العضو</h4>
+        <input type="number" id="civilID" placeholder=" أدخل السجل المدني أو الإقامة">
+        <button class="button" onclick="fetchData()">بحث</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const sheetURL = "https://script.google.com/macros/s/AKfycbw_5ZdkF79PyGgBCtjpn3B4HIeykwlB5VSEFCdaZCDxZRZIXDN2YKSsJr7wjr0dWML07A/exec"; // استبدل بالرابط الفعلي
+
+        async function fetchData() {
+            let civilID = document.getElementById("civilID").value;
+            if (!civilID) {
+                alert("الرجاء إدخال السجل المدني!");
+                return;
+            }
+
+            try {
+                let response = await fetch(sheetURL);
+                let data = await response.json();
+
+                let user = data.find(item => item["السجل المدني"] == civilID);
+                if (user) {
+                    // تنسيق تاريخ الميلاد
+                    const formattedDate = (user["تاريخ الميلاد"] || "لم يتم كتابة تاريخ ميلادك").replace(/T.*$/, "");
+
+                    document.getElementById("result").innerHTML = `
+                        <div class="data-item"><strong>:الأسم الثلاثي</strong><p>${user["الأسم الثلاثي"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:رقم الجوال</strong><p>${user["رقم الجوال"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:الرقم الأكاديمي</strong><p>${user["الرقم الأكاديمي"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:السجل المدني</strong><p>${user["السجل المدني"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:البريد الإلكتروني</strong><p>${user["البريد الإلكتروني"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:الكلية والتخصص</strong><p>${user["الكلية والتخصص"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:المرحلة الدراسية</strong><p>${user["المرحلة الدراسية"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:تاريخ الميلاد</strong><p>${formattedDate}</p></div>
+                        <div class="data-item"><strong>:اللجنة</strong><p>${user["اللجنة"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:حساب إكس</strong><p>${user["حساب إكس"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:حساب إنستقرام</strong><p>${user["حساب إنستقرام"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:حساب تيك توك</strong><p>${user["حساب تيك توك"] || "غير متوفر"}</p></div>
+                        <div class="data-item"><strong>:اللون الأساسي</strong>
+                            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الأساسي"]};"></div>
+                        </div>
+                        <div class="data-item"><strong>:اللون الثانوي</strong>
+                            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الثانوي"]};"></div>
+                        </div>
+                        <div style="display: flex; justify-content: center; margin-top: 10px;">
+                            <button onclick="redirectToEditPage()" class="interactive-button">تعديل البيانات</button>
+                        </div>
+                    `;
+                } else {
+                    document.getElementById("result").innerHTML = "<p>لا يوجد بيانات لهذا الرقم!</p>";
+                }
+            } catch (error) {
+                console.error("خطأ في جلب البيانات:", error);
+            }
+        }
+
+        function redirectToEditPage() {
+            window.location.href = "edit.html"; // ينقلك إلى صفحة edit.html
+        }
+    </script>
+</body>
+</html>
