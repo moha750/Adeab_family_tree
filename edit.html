@@ -148,10 +148,6 @@
                             </div>
                           </div>
                       </div>
-                      <div class="input-text">
-                        <input type="text" placeholder="أكتب أيّ شيء "  name="سبب تغيير الالوان" onclick="stopPropagation(event)" >
-                        <span> سبب تغيير الالوان🎨</span>
-                    </div>
                 </div>
             </div>
 
@@ -192,6 +188,19 @@
         function submitForm() {
     const form = document.querySelector('form');
     const formData = new FormData(form);
+
+    const nameInput = form.querySelector('input[name="الأسم الثلاثي"]');
+        if (!nameInput.value.trim()) {
+            Swal.fire({
+                text: 'شلون بنعدل غصنك بدون ما نعرف أسمك🦦 ',
+                icon: 'warning',
+                confirmButtonText: 'اووو صح😬',
+                confirmButtonColor: '#d33',
+                background: '#fff',
+            color: '#f8bb86'
+            });
+            return;
+        }
 
     const fields = form.querySelectorAll('input, select, textarea');
     let isAnyFieldFilled = false;
