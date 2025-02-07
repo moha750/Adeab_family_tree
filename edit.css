@@ -122,7 +122,6 @@ input[type="text"] ,[type="number"] ,[type="date"] ,[type="email"]  {
   font-size:13px;
   border-radius:5px;
   margin-top: 16px;
-  margin-bottom: 20px;
   text-align: right;
   color: #98c93c;
   font-family: bb;
