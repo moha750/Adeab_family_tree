@@ -1,0 +1,329 @@
+
+@font-face {
+    font-family: l;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Light.otf);
+  }
+  
+  @font-face {
+    font-family: r;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Regular.otf);
+  }
+  
+  @font-face {
+    font-family: m;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Medium.otf);
+  }
+  
+  @font-face {
+    font-family: b;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Bold.otf);
+  }
+  
+  @font-face {
+    font-family: bb;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Black.otf);
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    font-family: b;
+   }
+
+   
+   body {
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-image: url(BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    direction: rtl;
+    transition: opacity 0.5s ease;
+   }
+
+   body.fade-out {
+    opacity: 0;
+}
+
+.faq-container {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height:auto;
+  width:300px;
+  background-color:#fff;
+  border-radius:10px;
+  padding:10px 20px;
+  margin: 20px;
+}
+
+img{
+  width: 250px;
+}
+
+h4 {
+  color: #009345;
+  font-size: 17px;
+  font-family: bb;
+  margin: 15px 0px 5px;
+ }
+
+ p{
+  color:#98c93c;
+  font-size:14px;
+  font-family: m;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border:none;
+  border:2px solid rgb(245, 245, 245);
+  box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+  padding: 15px 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 10px;
+
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.faq-content.open {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+input[type="text"] ,[type="number"] ,[type="date"] ,[type="email"]  {
+  width:100%;
+  height:40px;
+  border:none;
+  border:2px solid rgb(245, 245, 245);
+  box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+  outline:none;
+  padding:0 10px;
+  box-sizing:border-box;
+  font-size:13px;
+  border-radius:5px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #98c93c;
+  font-family: bb;
+}
+
+#textarea {
+  width:100%;
+  height:150px;
+  border:none;
+  border:2px solid rgb(245, 245, 245);
+  box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+  outline:none;
+  padding: 10px;
+  box-sizing:border-box;
+  font-size:13px;
+  border-radius:5px;
+  margin-top: 16px;
+  text-align: right;
+  color: #98c93c;
+  font-family: bb;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item .icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 18px;
+  color: #98c93c;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.title {
+  color: #009345;
+  font-family: r;
+  font-size: 18px;
+}
+
+.input-text{
+  position:relative;
+  margin-top:30px;
+}
+
+.input-text span{
+  position:absolute;
+  right:0;
+  top:-13px;
+  font-size:13px;
+  font-family: b;
+  color:#009345;
+  }
+  
+  .input-text label {
+  position:absolute;
+  right:0;
+  top:-13px;
+  font-size:13px;
+  font-weight:900;
+  color:#009345;
+  font-family: b;
+  }
+
+  .adeabTeam {
+    width:100%;
+    height:40px;
+    text-align: center;
+    border:none;
+    border:2px solid rgb(245, 245, 245);
+    box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+    outline:none;
+    padding:0 10px;
+    box-sizing:border-box;
+    font-size:14px;
+    border-radius:5px;
+    margin-top: 16px;
+    color: #98c93c;
+    font-family: bb;
+    } 
+
+    #swatch{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #color {
+      width: 100%;
+    }
+    
+    .color1 {
+      box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+      border-radius: 15px;
+    }
+    
+    .color2 {
+      box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+    }
+    
+    #swatch .info{
+      color: #009345;
+      font-size: 8px;
+      margin-bottom: 10px;
+    }
+    
+    input[type="color"] {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      height: 75px;
+      padding: 0;
+      width: 100px;
+    }
+
+    button{
+      height:40px;
+      width:80%;
+      background: linear-gradient(45deg, rgba(0,147,69,1) 0%, rgba(152,201,60,1) 90%);
+      font-size:14px;
+      color:#fff;
+      border-radius:5px;
+      cursor:pointer;
+      transition:all 0.5s;
+      border: none;
+      margin: 15px 0px 12px 0px;
+      font-family: b;
+  }
+
+  .swal2-popup {
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'b';
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.swal2-confirm {
+  background: linear-gradient(45deg, #009345 0%, #98c93c 90%) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important; 
+  font-family: 'bb'!important;
+  font-size: 16px !important;
+  width: 40%;
+}
+
+.swal2-title {
+    color: #009345;
+    font-weight: bold;
+}
+
+.swal2-icon.swal2-warning {
+    color: #f0ad4e;
+}
+
+
+/* تصميم الـ Loader */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #009345;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+/* حركة الدوران */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.swal-custom-title {
+  font-size: 20px !important;          /* حجم الخط */
+  font-weight: bold;        /* جعل الخط عريض */
+  color: #009345 !important;           /* لون العنوان */
+}

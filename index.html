@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>شجرة عائلة نادي أدِيب</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="parent">
+                <div class="top-div">
+                   <img src="logo.png" alt="">
+                </div>
+            </div> 
+
+            <form method="post" action="https://script.google.com/macros/s/AKfycbzSl6oAyeJX4JeqOrhsd2QRc8Va2R3LTinVqLtDUBo1qpS9jO52eOpovd9BigxpEf_VzQ/exec" name="MyGroup">
+
+            <div class="main active">
+                <div class="content">
+                   <h4>     ماهي شجرة عائلة نادي أديب🤔🌳؟   </h4>
+                   <p>
+                    هي مبادرة تعمل على تيسير عمل القادة في نادي أدِيب، لِتمكنهم من الوصول إلى أعضاء النادي بِكُل يُسر وسهولة، وتنظيم المعلومات بطريقة موجزة وسلسة
+                  </p>
+                </div>
+                <div class="button">
+                    <button  type="button" id="tree" class="create-workspace"> 🌱تسجيل غصن جديد </button>
+                </div>
+                <div class="button">
+                  <button  type="button" id="edit" class="create-workspace"> 🪴رؤية الغصن </button>
+              </div>
+            </div> 
+
+
+
+    <script src="tree.js"></script>
+    <script>
+      document.querySelector('#tree').addEventListener('click', function() {
+    window.location.href = 'tree.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
+});
+    </script>
+    <script>
+      document.querySelector('#edit').addEventListener('click', function() {
+    window.location.href = 'search.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzSl6oAyeJX4JeqOrhsd2QRc8Va2R3LTinVqLtDUBo1qpS9jO52eOpovd9BigxpEf_VzQ/exec'
+      const form = document.forms['MyGroup']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => alert("Thank you! your form is submitted successfully." ))
+        // .then(() => {  window.location.reload(); })
+        // .catch(error => console.error('Error!', error.message))
+      })
+      </script>
+
+      </body>
+</html>
