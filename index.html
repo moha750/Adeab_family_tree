@@ -32,8 +32,11 @@
                     <button  type="button" id="tree" class="create-workspace"> 🌱تسجيل غصن جديد </button>
                 </div>
                 <div class="button">
-                  <button  type="button" id="edit" class="create-workspace"> 🪴رؤية الغصن </button>
+                  <button  type="button" id="search" class="create-workspace"> 🪴رؤية الغصن </button>
               </div>
+              <div class="button">
+                <button  type="button" id="edit" class="create-workspace"> 🛠️تعديل العضن </button>
+            </div>
             </div> 
 
 
@@ -45,13 +48,19 @@
 });
     </script>
     <script>
-      document.querySelector('#edit').addEventListener('click', function() {
+      document.querySelector('#search').addEventListener('click', function() {
     window.location.href = 'search.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
 });
     </script>
+        <script>
+          document.querySelector('#edit').addEventListener('click', function() {
+        window.location.href = 'edit.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
+    });
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
     <script>
+      
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzSl6oAyeJX4JeqOrhsd2QRc8Va2R3LTinVqLtDUBo1qpS9jO52eOpovd9BigxpEf_VzQ/exec'
       const form = document.forms['MyGroup']
 
