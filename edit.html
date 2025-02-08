@@ -14,21 +14,23 @@
 
     <div class="faq-container">
         <img src="logo.png" alt="شعار">
-        <h4>من هُنا تغير غصنك✍🏻</h4>
+        <h4>أختر الطلب الذي تريد تغييره✍🏻</h4>
         <p>
-            ملحوظة! لن يتم إعتماد أيّ تغيير إلا بعد مُراجعته من قبل المجلس الأعلى📝
+            قم بتعديل الخانة التي تريد تعديلها فقط، ولا تقم بتعبئة الخانات التي لا تريد تعديلها
         </p>
 
         <form action="#" method="post">
 
-            <div class="faq-item" onclick="toggleContent(this)">
-                <h1 class="title">البيانات الشخصية</h1>
-                <i class="fas fa-chevron-down icon"></i> <!-- أيقونة السهم -->
-                <div class="faq-content">
-                    <div class="input-text">
+                    <div style="  margin-bottom:10px;" class="input-text">
                         <input type="text" placeholder="أسمك يـ أدِيب/ـه "  name="الأسم الثلاثي" onclick="stopPropagation(event)" >
                         <span> الأسم الثلاثي✍🏻</span>
                     </div>
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تعديل البيانات الشخصية </h1>
+                <i class="fas fa-chevron-down icon"></i> <!-- أيقونة السهم -->
+                <div class="faq-content">
+
 
                     <div class="input-text">
                         <input type="number" placeholder="الرقم مكون من 10 ارقام "  name="السجل المدني" onclick="stopPropagation(event)" >
@@ -54,11 +56,16 @@
                         <input type="date"  name="تاريخ ميلادك" onclick="stopPropagation(event)" >
                         <span> تاريخ ميلادك🎉</span>
                     </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال جميع البيانات</button>
+                    </div>
                 </div>
             </div>
 
+            
+
             <div class="faq-item" onclick="toggleContent(this)">
-                <h1 class="title">المرحلة الدراسية</h1>
+                <h1 class="title">طلب تعديل المرحلة الدراسية </h1>
                 <i class="fas fa-chevron-down icon"></i>
                 <div class="faq-content">
                     <div class="input-text">
@@ -79,11 +86,14 @@
                             <option value="موظف"> موظف </option>
                           </select>
                     </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleContent(this)">
-                <h1 class="title">اللجنة</h1>
+                <h1 class="title">طلب تعديل اللجنة </h1>
                 <i class="fas fa-chevron-down icon"></i>
                 <div class="faq-content">
                     <div class="input-text">
@@ -104,11 +114,14 @@
                         <textarea name="سبب تغيير اللجنة" id="textarea" placeholder="لابُد من توضيح سبب تغيير اللجنة " onclick="stopPropagation(event)"></textarea>
                         <span> سبب تغيير اللجنة🔄  </span>
                     </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleContent(this)">
-                <h1 class="title">حسابات التواصل الاجتماعي</h1>
+                <h1 class="title">طلب تعديل التواصل الاجتماعي </h1>
                 <i class="fas fa-chevron-down icon"></i>
                 <div class="faq-content">
                     <div class="input-text">
@@ -125,11 +138,14 @@
                         <input id="input" type="text" placeholder="@username"  name="حساب تيك توك" onclick="toggleContent(this)">
                         <span> حسابك على منصة تيك توك🔗</span>
                     </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleContent(this)">
-                <h1 class="title">الالوان المُفضلة</h1>
+                <h1 class="title">طلب تعديل الالوان المُفضلة </h1>
                 <i class="fas fa-chevron-down icon"></i>
                 <div class="faq-content">
 
@@ -148,13 +164,16 @@
                             </div>
                           </div>
                       </div>
+                      <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
                 </div>
             </div>
 
                         <!-- زر إرسال واحد في أسفل النموذج -->
-            <div style="text-align: center; margin-top: 20px;">
+            <!-- <div style="text-align: center; margin-top: 20px;">
                 <button type="button" onclick="submitForm()">إرسال جميع البيانات</button>
-            </div>
+            </div> -->
 
         </form>
     </div>
