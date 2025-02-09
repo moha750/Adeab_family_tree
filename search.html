@@ -62,47 +62,53 @@
         Swal.close(); // ✅ إغلاق الـ Loader بعد انتهاء التحميل
 
         let user = data.find(item => item["السجل المدني"] == civilID);
-        if (user) {
-            const formattedDate = (user["تاريخ الميلاد"] || "لم يتم كتابة تاريخ ميلادك").replace(/T.*$/, "");
+if (user) {
+    // استخدام toLocaleDateString مع تنسيق اليوم/الشهر/السنة
+    let dateOfBirth = new Date(user["تاريخ الميلاد"] || "لم يتم كتابة تاريخ ميلادك");
+    const formattedDate = isNaN(dateOfBirth) ? "لم يتم كتابة تاريخ ميلادك" : dateOfBirth.toLocaleDateString('en-CA');
 
-            document.getElementById("result").innerHTML = `
-                <div class="data-item"><strong>:الأسم الثلاثي</strong><p>${user["الأسم الثلاثي"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:رقم الجوال</strong><p>${user["رقم الجوال"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:الرقم الأكاديمي</strong><p>${user["الرقم الأكاديمي"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:السجل المدني</strong><p>${user["السجل المدني"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:البريد الإلكتروني</strong><p>${user["البريد الإلكتروني"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:الكلية والتخصص</strong><p>${user["الكلية والتخصص"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:المرحلة الدراسية</strong><p>${user["المرحلة الدراسية"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:تاريخ الميلاد</strong><p>${formattedDate}</p></div>
-                <div class="data-item"><strong>:اللجنة</strong><p>${user["اللجنة"] || "غير متوفر"}</p></div>
-                <div class="data-item"><strong>:حساب إكس</strong><p>${user["حساب إكس"] || "لم تضع لك حساب على المنصة"}</p></div>
-                <div class="data-item"><strong>:حساب إنستقرام</strong><p>${user["حساب إنستقرام"] || "لم تضع لك حساب على المنصة"}</p></div>
-                <div class="data-item"><strong>:حساب تيك توك</strong><p>${user["حساب تيك توك"] || "لم تضع لك حساب على المنصة"}</p></div>
-                <div class="data-item"><strong>:اللون الأساسي</strong>
-                    <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الأساسي"]};"></div>
-                </div>
-                <div class="data-item"><strong>:اللون الثانوي</strong>
-                    <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الثانوي"]};"></div>
-                </div>
-                <div style="display: flex; justify-content: center; margin-top: 10px;">
-                    <button onclick="redirectToEditPage()" class="interactive-button">تعديل البيانات</button>
-                </div>
-            `;
-        } else {
-            Swal.fire({
-                text: '❌للأسف، مافي بيانات على هذا الرقم',
-                icon: 'error',
-                confirmButtonText: 'راح اتأكد',
-                confirmButtonColor: '#009345',
-                background: '#fff9f9',
-                color: '#f27474',
-                customClass: {
-        title: 'swal-custom-title',
-        confirmButton: 'swal-custom-button',
-        popup: 'swal-custom-popup'
-    },
-            });
-        }
+
+    document.getElementById("result").innerHTML = `
+        <div class="data-item"><strong>:الأسم الثلاثي</strong><p>${user["الأسم الثلاثي"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:رقم الجوال</strong><p>${user["رقم الجوال"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:الرقم الأكاديمي</strong><p>${user["الرقم الأكاديمي"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:السجل المدني</strong><p>${user["السجل المدني"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:البريد الإلكتروني</strong><p>${user["البريد الإلكتروني"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:الكلية والتخصص</strong><p>${user["الكلية والتخصص"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:المرحلة الدراسية</strong><p>${user["المرحلة الدراسية"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:تاريخ الميلاد</strong><p>${formattedDate}</p></div>
+        <div class="data-item"><strong>:اللجنة</strong><p>${user["اللجنة"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:حساب إكس</strong><p>${user["حساب إكس"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:حساب إنستقرام</strong><p>${user["حساب إنستقرام"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:حساب تيك توك</strong><p>${user["حساب تيك توك"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:اللون الأساسي</strong>
+            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الأساسي"]};"></div>
+        </div>
+        <div class="data-item"><strong>:اللون الثانوي</strong>
+            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الثانوي"]};"></div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 10px;">
+            <button onclick="redirectToEditPage()" class="interactive-button">تعديل البيانات</button>
+        </div>
+    `;
+} else {
+    Swal.fire({
+        text: '❌للأسف، مافي بيانات على هذا الرقم',
+        icon: 'error',
+        confirmButtonText: 'راح اتأكد',
+        confirmButtonColor: '#009345',
+        background: '#fff9f9',
+        color: '#f27474',
+        customClass: {
+            title: 'swal-custom-title',
+            confirmButton: 'swal-custom-button',
+            popup: 'swal-custom-popup'
+        },
+    });
+}
+
+
+
     } catch (error) {
         Swal.close();
         console.error("خطأ في جلب البيانات:", error);
