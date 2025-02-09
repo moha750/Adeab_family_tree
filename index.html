@@ -29,7 +29,7 @@
                   </p>
                 </div>
                 <div class="button">
-                    <button  type="button" id="tree" class="create-workspace"> 🌱تسجيل غصن جديد </button>
+                    <button  type="button" class="tree" class="create-workspace"> 🌱تسجيل غصن جديد </button>
                 </div>
                 <div class="button">
                   <button  type="button" id="search" class="create-workspace"> 🪴رؤية الغصن </button>
@@ -42,11 +42,11 @@
 
 
     <script src="tree.js"></script>
-    <script>
+    <!-- <script>
       document.querySelector('#tree').addEventListener('click', function() {
     window.location.href = 'tree.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
 });
-    </script>
+    </script> -->
     <script>
       document.querySelector('#search').addEventListener('click', function() {
     window.location.href = 'search.html'; // استبدل 'branch.html' برابط الصفحة الجديدة
@@ -72,6 +72,16 @@
         // .catch(error => console.error('Error!', error.message))
       })
       </script>
+
+<script>
+  document.querySelector('.tree').addEventListener('click', function() {
+    Swal.fire({
+      title: '🤨صّح النوم يـ شاطر! خلاص قفلنا الشجرة',
+      confirmButtonText: '😔افاااا',
+    });
+  });
+</script>
+
 
       </body>
 </html>
