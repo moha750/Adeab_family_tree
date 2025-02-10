@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- مكتبة الأيقونات -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <title>شجرة عائلة نادي أدِيب</title>
+
+
+</head>
+<body>
+
+    <div class="faq-container">
+        <img src="logo.png" alt="شعار">
+        <h4>أختر الطلب الذي تريد تغييره✍🏻</h4>
+        <p>
+            قم بتعديل الخانة التي تريد تعديلها فقط، ولا تقم بتعبئة الخانات التي لا تريد تعديلها
+        </p>
+
+        <form action="#" method="post">
+
+                    <div style="  margin-bottom:10px;" class="input-text">
+                        <input type="text" placeholder="أسمك يـ أدِيب/ـه "  name="الأسم الثلاثي" onclick="stopPropagation(event)" >
+                        <span> الأسم الثلاثي✍🏻</span>
+                    </div>
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تعديل البيانات الشخصية </h1>
+                <i class="fas fa-chevron-down icon"></i> <!-- أيقونة السهم -->
+                <div class="faq-content">
+
+
+                    <div class="input-text">
+                        <input type="number" placeholder="الرقم مكون من 10 ارقام "  name="السجل المدني" onclick="stopPropagation(event)" >
+                        <span> السجل المدني💳</span>
+                    </div> 
+
+                    <div class="input-text">
+                        <input type="number" placeholder="الرقم مكون من 9 ارقام "  name="الرقم الأكاديمي" onclick="stopPropagation(event)" >
+                        <span> الرقم الأكاديمي🔢</span>
+                    </div> 
+
+                    <div class="input-text">
+                        <input type="number" placeholder="ابدأ بِـ05 "  name="رقم الجوال" onclick="stopPropagation(event)" >
+                        <span> رقم الجوال📱</span>
+                    </div> 
+
+                    <div class="input-text">
+                        <input type="email" placeholder="Example@gamil.com "  name="البريد الإلكتروني" onclick="stopPropagation(event)" >
+                        <span> البريد الإلكتروني✉️</span>
+                    </div> 
+
+                    <div class="input-text">
+                        <input type="date"  name="تاريخ ميلادك" onclick="stopPropagation(event)" >
+                        <span> تاريخ ميلادك🎉</span>
+                    </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال جميع البيانات</button>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تعديل المرحلة الدراسية </h1>
+                <i class="fas fa-chevron-down icon"></i>
+                <div class="faq-content">
+                    <div class="input-text">
+                        <input type="text" id="input" placeholder="كلية الآداب، الإعلام - كلية إدارة الأعمال، المُحاسبة "  name="الكلية والتخصص" onclick="stopPropagation(event)">
+                        <span> الكلية والتخصص📚</span>
+                    </div>
+
+                    <div class="input-text">
+                        <label  for="input"> المستوى الدراسي📊</label>
+                
+                          <select id="input" class="adeabTeam" name="المرحلة الدراسية" >
+                            <option value="">أختر مستواك الدراسي</option>
+                            <option value="الدبلوم"> الدبلوم  </option>
+                            <option value="البكالوريوس"> البكالوريوس </option>
+                            <option value="الماجستير"> الماجستير </option>
+                            <option value="الدكتوراة"> الدكتوراة </option>
+                            <option value="خريج"> خريج </option>
+                            <option value="موظف"> موظف </option>
+                          </select>
+                    </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تغيير اللجنة </h1>
+                <i class="fas fa-chevron-down icon"></i>
+                <div class="faq-content">
+                    <div class="input-text">
+                        <label  for="input">اللجنة🎟️</label>
+                
+                          <select id="input" class="adeabTeam" name="اللجنة" >
+                            <option value="">أختر اللجنة التي تريد النقل اليها</option>
+                            <option value="لجنَة التَّألِيف">لجنَة التَّألِيف🧠🪶</option>
+                            <option value="لجنَة الرُّوَاة">لجنَة الرُّوَاة🎙️🎭</option>
+                            <option value="لجنَة السُّفرَاء">لجنَة السُّفرَاء📄🫱🏻‍🫲🏽</option>
+                            <option value="لجنَة الفَعالِيَّات">لجنَة الفَعالِيَّات🗓️🧩</option>
+                            <option value="لجنَة التَّصمِيم">لجنَة التَّصمِيم🖼️💻</option>
+                            <option value="لجنَة التَّسوِيق">لجنَة التَّسوِيق📱📣</option>
+                            <option value="لجنَة الإِنتَاج">لجنَة الإِنتَاج🎬📸</option>
+                          </select>
+                    </div>
+                    <div class="input-text">
+                        <textarea name="سبب تغيير اللجنة" id="textarea" placeholder="لابُد من توضيح سبب تغيير اللجنة " onclick="stopPropagation(event)"></textarea>
+                        <span> سبب تغيير اللجنة🔄  </span>
+                    </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تعديل التواصل الاجتماعي </h1>
+                <i class="fas fa-chevron-down icon"></i>
+                <div class="faq-content">
+                    <div class="input-text">
+                        <input id="input" type="text" placeholder="@username"  name="حساب إكس" onclick="toggleContent(this)">
+                        <span> حسابك على منصة إكس🔗</span>
+                    </div>
+                
+                        <div class="input-text">
+                        <input id="input" type="text" placeholder="@username "  name="حساب إنستقرام" onclick="toggleContent(this)">
+                        <span> حسابك على منصة إنستقرام🔗</span>
+                    </div>
+                
+                    <div class="input-text">
+                        <input id="input" type="text" placeholder="@username"  name="حساب تيك توك" onclick="toggleContent(this)">
+                        <span> حسابك على منصة تيك توك🔗</span>
+                    </div>
+                    <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleContent(this)">
+                <h1 class="title">طلب تعديل الالوان المُفضلة </h1>
+                <i class="fas fa-chevron-down icon"></i>
+                <div class="faq-content">
+
+                    <div id="swatch">
+                      <div class="color2"> 
+                        <input onclick="toggleContent(this)" type="color" id="color" name="اللون الأساسي" value="#009345">
+                        <div class="info">
+                          <h1 class="title">اللون الأساسي</h1>
+                        </div>
+                        </div>
+
+                        <div class="color1">
+                            <input onclick="toggleContent(this)" type="color" id="color" name="اللون الثانوي" value="#98c93c">
+                            <div class="info">
+                              <h1 class="title">اللون الثانوي</h1>
+                            </div>
+                          </div>
+                      </div>
+                      <div onclick="toggleContent(this)" style="text-align: center; margin-top: 20px;">
+                        <button type="button" onclick="submitForm()">إرسال التعديل</button>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- زر إرسال واحد في أسفل النموذج -->
+            <!-- <div style="text-align: center; margin-top: 20px;">
+                <button type="button" onclick="submitForm()">إرسال جميع البيانات</button>
+            </div> -->
+
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script>
+        function toggleContent(clickedItem) {
+            const allItems = document.querySelectorAll('.faq-item');
+            const content = clickedItem.querySelector('.faq-content');
+            const icon = clickedItem.querySelector('.icon');
+
+            allItems.forEach(item => {
+                if (item !== clickedItem) {
+                    item.querySelector('.faq-content').classList.remove('open');
+                    item.querySelector('.icon').classList.remove('rotate');
+                }
+            });
+
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
+
+        function stopPropagation(event) {
+    event.stopPropagation();
+}
+
+    </script>
+
+    <script>
+        function submitForm() {
+    const form = document.querySelector('form');
+    const formData = new FormData(form);
+
+    const nameInput = form.querySelector('input[name="الأسم الثلاثي"]');
+        if (!nameInput.value.trim()) {
+            Swal.fire({
+                text: 'شلون بنعدل غصنك بدون ما نعرف أسمك🦦 ',
+                icon: 'warning',
+                confirmButtonText: 'اووو صح😬',
+                confirmButtonColor: '#d33',
+                background: '#fff',
+            color: '#f8bb86'
+            });
+            return;
+        }
+
+    const fields = form.querySelectorAll('input, select, textarea');
+    let isAnyFieldFilled = false;
+
+    fields.forEach(field => {
+        if (field.type !== 'color' && field.value.trim() !== '') {
+            isAnyFieldFilled = true;
+        }
+    });
+
+    if (!isAnyFieldFilled) {
+        Swal.fire({
+            text: 'شلون تبغى تغير غصنك وأنت ما كتبت شيء 🦦',
+            icon: 'warning',
+            confirmButtonText: '😔حاضر، لا تعصب',
+            confirmButtonColor: '#009345',
+            background: '#fff',
+            color: '#f8bb86'
+        });
+        return;
+    }
+
+    const colorInputs = form.querySelectorAll('input[type="color"]');
+    colorInputs.forEach(input => {
+        if (input.value === "#009345" || input.value === "#98c93c") {
+            formData.delete(input.name);
+        }
+    });
+
+    // ✅ عرض الـ Loader أثناء إرسال البيانات
+    Swal.fire({
+        title: ' ثواني قاعدين نرفع غصنك للمجلس الأعلى 🏃🏻‍♂️🏃🏻‍♂️',
+        html: '<div class="spinner"></div>',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        background: '#fff',
+        customClass: {
+        title: 'swal-custom-title',
+        confirmButton: 'swal-custom-button',
+        popup: 'swal-custom-popup'
+    },
+        
+    });
+
+    fetch('https://script.google.com/macros/s/AKfycbzyX7EUHNXqXfgax8ayrhJ83muvCGzMlcNj-Z64WT9enik4UrUdXdF_4v_2l_r5Ih3ePw/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        Swal.close(); // ✅ إغلاق الـ Loader
+
+        if (data.result === 'success') {
+            Swal.fire({
+                text: 'وصلنا طلبك! راح نتواصل معك بإذن الله✅',
+                icon: 'success',
+                confirmButtonText: 'شُكرًا أدِيب 💚'  ,
+                confirmButtonColor: '#009345',
+                background: '#fff',
+                color: '#2e7d32'
+            }).then(() => {
+                location.reload(); // ✅ إعادة تحميل الصفحة بعد تأكيد المستخدم
+            });
+        } else {
+            Swal.fire({
+                title: '❌ حدث خطأ!',
+                text: 'حدث خطأ أثناء إرسال البيانات.',
+                icon: 'error',
+                confirmButtonText: 'حسنًا',
+                confirmButtonColor: '#d33',
+                background: '#ffebee',
+                color: '#c62828'
+            });
+        }
+    })
+    .catch(error => {
+        Swal.close(); // ✅ إغلاق الـ Loader إذا حدث خطأ
+        console.error('Error:', error);
+        Swal.fire({
+            title: '⚠️ خطأ في الاتصال!',
+            text: 'فشل الاتصال بالسيرفر. حاول مرة أخرى.',
+            icon: 'warning',
+            confirmButtonText: 'حسنًا',
+            confirmButtonColor: '#f0ad4e',
+            background: '#fff8e1',
+            color: '#ff6f00'
+        });
+    });
+}
+
+    </script>
+    <script>(function(w, d) { w.CollectId = "64ef8a7f8a3fde15c3eccc87"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
+
+</body>
+</html>

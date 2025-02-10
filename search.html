@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <title>شجرة عائلة نادي أدِيب</title>
+</head>
+<body>
+    <div class="card">
+        <img src="logo.png" alt="شعار">
+        <h4>  💚🌳أهلاً بك في شجرة عائلة نادي أدِيب </h4>
+        <p> 🪴أدخل سجلك المدني حتى تشوف غصنك </p>
+        <input type="number" id="civilID" placeholder=" أدخل السجل المدني أو الإقامة">
+        <button class="button" onclick="fetchData()">بحث</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script>
+        const sheetURL = "https://script.google.com/macros/s/AKfycbw_5ZdkF79PyGgBCtjpn3B4HIeykwlB5VSEFCdaZCDxZRZIXDN2YKSsJr7wjr0dWML07A/exec"; // استبدل بالرابط الفعلي
+
+        async function fetchData() {
+    let civilID = document.getElementById("civilID").value;
+    if (!civilID) {
+        Swal.fire({
+            text: '!🦦شلون نبحث عن غصنك وأنت ما حطيت رقمك',
+            icon: 'error',
+            confirmButtonText: '😔حاضر، لا تعصب',
+            confirmButtonColor: '#009345',
+            background: '#fff9f9',
+            color: '#f27474',
+            customClass: {
+        title: 'swal-custom-title',
+        confirmButton: 'swal-custom-button',
+        popup: 'swal-custom-popup'
+    },
+            
+        });
+        return;
+    }
+
+    // ✅ عرض الـ Loader
+    Swal.fire({
+        title: '🏃🏻‍♂️🏃🏻‍♂️ثواني قاعدين ندور عن غصنك',
+        html: '<div class="spinner"></div>',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        background: '#fff',
+        customClass: {
+        title: 'swal-custom-title',
+        confirmButton: 'swal-custom-button',
+        popup: 'swal-custom-popup'
+    },
+    });
+
+    try {
+        let response = await fetch(sheetURL);
+        let data = await response.json();
+
+        Swal.close(); // ✅ إغلاق الـ Loader بعد انتهاء التحميل
+
+        let user = data.find(item => item["السجل المدني"] == civilID);
+if (user) {
+    // استخدام toLocaleDateString مع تنسيق اليوم/الشهر/السنة
+    let dateOfBirth = new Date(user["تاريخ الميلاد"] || "لم يتم كتابة تاريخ ميلادك");
+    const formattedDate = isNaN(dateOfBirth) ? "لم يتم كتابة تاريخ ميلادك" : dateOfBirth.toLocaleDateString('en-CA');
+
+
+    document.getElementById("result").innerHTML = `
+        <div class="data-item"><strong>:الأسم الثلاثي</strong><p>${user["الأسم الثلاثي"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:رقم الجوال</strong><p>${user["رقم الجوال"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:الرقم الأكاديمي</strong><p>${user["الرقم الأكاديمي"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:السجل المدني</strong><p>${user["السجل المدني"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:البريد الإلكتروني</strong><p>${user["البريد الإلكتروني"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:الكلية والتخصص</strong><p>${user["الكلية والتخصص"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:المرحلة الدراسية</strong><p>${user["المرحلة الدراسية"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:تاريخ الميلاد</strong><p>${formattedDate}</p></div>
+        <div class="data-item"><strong>:اللجنة</strong><p>${user["اللجنة"] || "غير متوفر"}</p></div>
+        <div class="data-item"><strong>:حساب إكس</strong><p>${user["حساب إكس"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:حساب إنستقرام</strong><p>${user["حساب إنستقرام"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:حساب تيك توك</strong><p>${user["حساب تيك توك"] || "لم تضع لك حساب على المنصة"}</p></div>
+        <div class="data-item"><strong>:اللون الأساسي</strong>
+            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الأساسي"]};"></div>
+        </div>
+        <div class="data-item"><strong>:اللون الثانوي</strong>
+            <div style="width: 100%; border-radius: 7px; height: 30px; background-color: ${user["اللون الثانوي"]};"></div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 10px;">
+            <button onclick="redirectToEditPage()" class="interactive-button">تعديل البيانات</button>
+        </div>
+    `;
+} else {
+    Swal.fire({
+        text: '❌للأسف، مافي بيانات على هذا الرقم',
+        icon: 'error',
+        confirmButtonText: 'راح اتأكد',
+        confirmButtonColor: '#009345',
+        background: '#fff9f9',
+        color: '#f27474',
+        customClass: {
+            title: 'swal-custom-title',
+            confirmButton: 'swal-custom-button',
+            popup: 'swal-custom-popup'
+        },
+    });
+}
+
+
+
+    } catch (error) {
+        Swal.close();
+        console.error("خطأ في جلب البيانات:", error);
+        Swal.fire({
+            text: 'حدث خطأ أثناء جلب البيانات!',
+            icon: 'error',
+            confirmButtonText: 'حسنًا',
+            confirmButtonColor: '#009345',
+            customClass: {
+        title: 'swal-custom-title',
+        confirmButton: 'swal-custom-button',
+        popup: 'swal-custom-popup'
+    },
+            
+        });
+    }
+}
+
+
+        function redirectToEditPage() {
+            window.location.href = "edit.html"; // ينقلك إلى صفحة edit.html
+        }
+    </script>
+
+    <script>(function(w, d) { w.CollectId = "64ef8a7f8a3fde15c3eccc87"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+</body>
+</html>
